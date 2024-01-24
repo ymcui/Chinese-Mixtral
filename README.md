@@ -9,7 +9,7 @@
     <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/Chinese-Mixtral.svg?color=blue&style=flat-square">
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/ymcui/Chinese-Mixtral">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ymcui/Chinese-Mixtral">
-    <a href="https://app.codacy.com/gh/ymcui/Chinese-Mixtral/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/1710faac5e634acaabfc26b0a778cdde"/></a>
+    <a href="https://app.codacy.com/gh/ymcui/Chinese-Mixtral/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/142d688425494644b5b156068f55370d"/></a>
 </p>
 
 
@@ -124,13 +124,13 @@
 
 | 工具   | 特点     | CPU  | GPU  | 量化 | GUI  | API  | vLLM<sup>§</sup> |                      教程                             |
 | :----------------------------------------------------------- | ---------------------------- | :--: | :--: | :--: | :--: | :--: | :--: |:--: |
-| [**llama.cpp**](https://github.com/ggerganov/llama.cpp)      | 丰富的量化选项和高效本地推理 |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ❌   | [link](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/wiki/llamacpp_zh) |
-| [**🤗Transformers**](https://github.com/huggingface/transformers) | 原生transformers推理接口     |  ✅   |  ✅   |  ✅   |  ✅   |  ❌   |  ✅  | [link](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/wiki/inference_with_transformers_zh) |
+| [**llama.cpp**](https://github.com/ggerganov/llama.cpp)      | 丰富的量化选项和高效本地推理 |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ❌   | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/llamacpp_zh) |
+| [**🤗Transformers**](https://github.com/huggingface/transformers) | 原生transformers推理接口     |  ✅   |  ✅   |  ✅   |  ✅   |  ❌   |  ✅  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/inference_with_transformers_zh) |
 | [**Colab Demo**](https://colab.research.google.com/drive/1yu0eZ3a66by8Zqm883LLtRQrguBAb9MR?usp=sharing) | 在Colab中启动交互界面 | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | [link](https://colab.research.google.com/drive/1yu0eZ3a66by8Zqm883LLtRQrguBAb9MR?usp=sharing) |
-| [**仿OpenAI API调用**](https://platform.openai.com/docs/api-reference) | 仿OpenAI API接口的服务器Demo |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ✅  | [link](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/wiki/api_calls_zh) |
-| [**text-generation-webui**](https://github.com/oobabooga/text-generation-webui) | 前端Web UI界面的部署方式 |  ✅   |  ✅   |  ✅   |  ✅   |  ✅<sup>†</sup>  | ❌  | [link](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/wiki/text-generation-webui_zh) |
-| [**LangChain**](https://github.com/hwchase17/langchain) | 适合二次开发的大模型应用开源框架 |  ✅<sup>†</sup>  |  ✅   |  ✅<sup>†</sup>   |  ❌   |  ❌   | ❌  | [link](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/wiki/langchain_zh) |
-| [**privateGPT**](https://github.com/imartinez/privateGPT) | 多文档本地问答框架 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | [link](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/wiki/privategpt_zh) |
+| [**仿OpenAI API调用**](https://platform.openai.com/docs/api-reference) | 仿OpenAI API接口的服务器Demo |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ✅  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/api_calls_zh) |
+| [**text-generation-webui**](https://github.com/oobabooga/text-generation-webui) | 前端Web UI界面的部署方式 |  ✅   |  ✅   |  ✅   |  ✅   |  ✅<sup>†</sup>  | ❌  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/text-generation-webui_zh) |
+| [**LangChain**](https://github.com/hwchase17/langchain) | 适合二次开发的大模型应用开源框架 |  ✅<sup>†</sup>  |  ✅   |  ✅<sup>†</sup>   |  ❌   |  ❌   | ❌  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/langchain_zh) |
+| [**privateGPT**](https://github.com/imartinez/privateGPT) | 多文档本地问答框架 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/privategpt_zh) |
 
 > [!NOTE]
 > <sup>†</sup> 工具支持该特性，但教程中未实现，详细说明请参考对应官方文档<br/>
@@ -150,16 +150,15 @@
 
 | 系统                                                         | 对战胜率（无平局） ↓ | Elo评分 |
 | ------------------------------------------------------------ | :------------------: | :-----: |
-| **Chinese-Alpaca-2-13B-16K**                                 |        86.84%        |  1580   |
-| **Chinese-Alpaca-2-13B**                                     |        72.01%        |  1579   |
-| [Chinese-Alpaca-Pro-33B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |        64.87%        |  1548   |
-| **Chinese-Alpaca-2-7B**                                      |        64.11%        |  1572   |
-| [Chinese-Alpaca-Pro-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |        62.05%        |  1500   |
-| **Chinese-Alpaca-2-7B-16K**                                  |        61.67%        |  1540   |
-| [Chinese-Alpaca-Pro-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |        61.26%        |  1567   |
-| [Chinese-Alpaca-Plus-33B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |        31.29%        |  1401   |
-| [Chinese-Alpaca-Plus-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |        23.43%        |  1329   |
-| [Chinese-Alpaca-Plus-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |        20.92%        |  1379   |
+| **Chinese-Mixtral-Instruct**                                 |                      |         |
+| Chinese-Alpaca-2-13B-16K                                     |                      |         |
+| Chinese-Alpaca-2-13B                                         |                      |         |
+| [Chinese-Alpaca-Pro-33B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |                      |         |
+| Chinese-Alpaca-2-7B                                          |                      |         |
+| [Chinese-Alpaca-Pro-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |                      |         |
+| Chinese-Alpaca-2-7B-16K                                      |                      |         |
+| [Chinese-Alpaca-Pro-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |                      |         |
+
 
 > [!NOTE]
 > 以上结果截至2023年9月1日。最新结果请进入[**⚔️竞技场**](http://llm-arena.ymcui.com/)进行查看。
@@ -179,6 +178,15 @@
 #### CMMLU
 
 [CMMLU](https://github.com/haonan-li/CMMLU)是另一个综合性中文评测数据集，专门用于评估语言模型在中文语境下的知识和推理能力，涵盖了从基础学科到高级专业水平的67个主题，共计11.5K个选择题。CMMLU推理代码请参考本项目：[📖GitHub Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/cmmlu_zh)
+
+| Models             | Valid (0-shot) | Valid (few-shot) | Test (0-shot) | Test (few-shot) |
+| ------------------------ | :------------: | :------------: | :-----------: | :-----------: |
+| Chinese-Mixtral-Instruct |                |                |               |               |
+| Chinese-Mixtral          |                |                |               |               |
+
+#### MMLU
+
+MMLU是一个用于评测自然语言理解能力的英文评测数据集，是当今用于评测大模型能力的主要数据集之一，其中验证集和测试集分别包含？和？个选择题，涵盖52个学科。MMLU推理代码请参考本项目：[📖GitHub Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/mmlu_zh)
 
 | Models             | Valid (0-shot) | Valid (few-shot) | Test (0-shot) | Test (few-shot) |
 | ------------------------ | :------------: | :------------: | :-----------: | :-----------: |
@@ -215,7 +223,7 @@ TBA
 
 ## 免责声明
 
-本项目基于由Meta发布的Llama-2模型进行开发，使用过程中请严格遵守Llama-2的开源许可协议。如果涉及使用第三方代码，请务必遵从相关的开源许可协议。模型生成的内容可能会因为计算方法、随机因素以及量化精度损失等影响其准确性，因此，本项目不对模型输出的准确性提供任何保证，也不会对任何因使用相关资源和输出结果产生的损失承担责任。如果将本项目的相关模型用于商业用途，开发者应遵守当地的法律法规，确保模型输出内容的合规性，本项目不对任何由此衍生的产品或服务承担责任。
+本项目基于由Mistral.ai发布的Mixtral模型进行开发，使用过程中请严格遵守Mixtral的开源许可协议。如果涉及使用第三方代码，请务必遵从相关的开源许可协议。模型生成的内容可能会因为计算方法、随机因素以及量化精度损失等影响其准确性，因此，本项目不对模型输出的准确性提供任何保证，也不会对任何因使用相关资源和输出结果产生的损失承担责任。如果将本项目的相关模型用于商业用途，开发者应遵守当地的法律法规，确保模型输出内容的合规性，本项目不对任何由此衍生的产品或服务承担责任。
 
 
 ## 问题反馈
