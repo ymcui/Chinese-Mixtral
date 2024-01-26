@@ -209,10 +209,9 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势。实测Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现。
 <p align="center">
     <br>
-    <img src="./pics/chinese-mixtral-ppl.png" width="600"/>
+    <img src="./pics/chinese-mixtral-ppl.png" width="800"/>
     <br>
 </p>
-
 
 ## 训练与精调
 
