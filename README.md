@@ -12,7 +12,7 @@
     <a href="https://app.codacy.com/gh/ymcui/Chinese-Mixtral/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/142d688425494644b5b156068f55370d"/></a>
 </p>
 
-本项目基于Mistral.ai发布的[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了**中文Mixtral**基础模型，并且进一步通过指令精调，得到了**中文Mixtral-Instruct**指令模型。该模型原生支持**32K上下文**，能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
+本项目基于Mistral.ai发布的[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了**中文Mixtral**基础模型，并且进一步通过指令精调，得到了**中文Mixtral-Instruct**指令模型。该模型原生支持**32K上下文（实测支持64K+）**，能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
 
 #### 本项目主要内容
 
@@ -75,7 +75,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 | 基于什么模型训练 | 原版Mixtral-8x7B-v0.1 | 中文Mixtral |
 | 训练语料 | 无标注通用语料 | 有标注指令数据 |
 | 词表大小 | 原版词表，32000 | 原版词表，32000 |
-| 上下文长度 | 32768（32K） | 32768（32K） |
+| 支持上下文长度 | 32K（实测支持64K+） | 32K（实测支持64K+） |
 | 输入模板              | 不需要                                                 | 需要套用Mixtral-Instruct模板 |
 | 适用场景            | 文本续写：给定上文，让模型生成下文            | 指令理解：问答、写作、聊天、交互等 |
 | 不适用场景          | 指令理解 、多轮聊天等                                  |  文本无限制自由生成                                                       |
@@ -91,8 +91,8 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 | 模型名称                  |   类型   |                    完整版（94 GB）                    |                    LoRA版（2.4 GB）                    |                    GGUF版                    |
 | :------------------------ | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| Chinese-Mixtral | 基座模型 | [百度] [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral) | [百度] [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-lora) | [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-gguf) |
-| Chinese-Mixtral-Instruct | 指令模型 | [百度] [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct) | [百度] [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct-lora) | [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct-gguf) |
+| Chinese-Mixtral | 基座模型 | [[Baidu]](https://pan.baidu.com/s/1nwJ8JkMTUrCkDEccg7C9Pw?pwd=33kb) [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral) | [[Baidu]](https://pan.baidu.com/s/1XRw2-rumi-Pg0CrXqEh8ug?pwd=8gjk) [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-lora) | [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-gguf) |
+| Chinese-Mixtral-Instruct | 指令模型 | [Baidu] [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct) | [Baidu] [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct-lora) | [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct-gguf) |
 
 > [!NOTE]
 > 若无法访问HF，可考虑一些镜像站点（如hf-mirror.com），具体方法请自行查找解决。
@@ -178,14 +178,14 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 [LongBench](https://github.com/THUDM/LongBench)是一个大模型长文本理解能力的评测基准，由6大类、20个不同的任务组成，多数任务的平均长度在5K-15K之间，共包含约4.75K条测试数据。以下是本项目长上下文版模型在该中文任务（含代码任务）上的评测效果。LongBench推理代码请参考本项目：[📖GitHub Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/longbench_zh)
 
-| Models                   | 单文档QA | 多文档QA | 摘要 | Few-shot学习 | 代码补全 | 合成任务 | 平均 |
-| ------------------------ | :------: | :------: | :--: | :----------: | :------: | :------: | :--: |
-| Chinese-Mixtral-Instruct |          |          |      |              |          |          |      |
-| Chinese-Mixtral          |          |          |      |              |          |          |      |
-| Chinese-Alpaca-2-13B-16K |   47.9   |   26.7   | 13.0 |     22.3     |   46.6   |   21.5   | 29.7 |
-| Chinese-LLaMA-2-13B-16K  |   36.7   |   17.7   | 3.1  |     29.8     |   13.8   |   3.0    | 17.3 |
-| Chinese-Alpaca-2-7B-64K  |   44.7   |   28.1   | 14.4 |     39.0     |   44.6   |   5.0    | 29.3 |
-| Chinese-LLaMA-2-7B-64K   |   27.2   |   16.4   | 6.5  |     33.0     |   7.8    |   5.0    | 16.0 |
+| Models                   | 单文档QA | 多文档QA | 摘要 | FS学习 | 代码补全 | 合成任务 | 平均 |
+| ------------------------ | :------: | :------: | :--: | :----: | :------: | :------: | :--: |
+| Chinese-Mixtral-Instruct |          |          |      |        |          |          |      |
+| Chinese-Mixtral          |          |          |      |        |          |          |      |
+| Chinese-Alpaca-2-13B-16K |   47.9   |   26.7   | 13.0 |  22.3  |   46.6   |   21.5   | 29.7 |
+| Chinese-LLaMA-2-13B-16K  |   36.7   |   17.7   | 3.1  |  29.8  |   13.8   |   3.0    | 17.3 |
+| Chinese-Alpaca-2-7B-64K  |   44.7   |   28.1   | 14.4 |  39.0  |   44.6   |   5.0    | 29.3 |
+| Chinese-LLaMA-2-7B-64K   |   27.2   |   16.4   | 6.5  |  33.0  |   7.8    |   5.0    | 16.0 |
 
 ### 量化效果评测
 
@@ -205,6 +205,14 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 > - BPW（Bits-Per-Weight）：单位参数比特，例如Q6_K实际平均精度为6.57
 > - PPL（困惑度）：以4K上下文测量，数值越低越好
 > - 生成速度：提供了Apple M3 Max（Metal）以及NVIDIA A100（40G）的生成速度（单位ms/token），数值越低越好
+
+以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势。实测Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现。
+<p align="center">
+    <br>
+    <img src="./pics/chinese-mixtral-ppl.png" width="600"/>
+    <br>
+</p>
+
 
 ## 训练与精调
 
