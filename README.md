@@ -29,7 +29,7 @@
 
 ## 新闻
 
-[2023/07/19] 🚀启动[中文LLaMA-2、Alpaca-2开源大模型项目](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)
+**[2024/??/??] 🚀 正式发布Chinese-Mixtral（基座模型），Chinese-Mixtral-Instruct（指令/chat模型）。详情查看：[📚v1.0版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)**
 
 
 ## 内容导引
@@ -45,7 +45,7 @@
 
 ## 模型简介
 
-本项目推出了基于[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)的中文Mixtral以及中文Mixtral-Instruct系列模型，其主要特点如下：
+本项目开源了基于[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)开发的中文Mixtral、中文Mixtral-Instruct模型，其主要特点如下：
 
 #### 📖 稀疏混合专家模型
 
@@ -57,7 +57,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 #### 🚄 原生支持32K上下文
 
-与[Chinese-LLaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca)以及[Chinese-LLaMA-Alpaca-2](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)项目不同，Mixtral模型原生支持32K上下文。用户可使用单一模型来解决不同长度的各类任务。
+与[Chinese-LLaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca)以及[Chinese-LLaMA-Alpaca-2](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)项目不同，Mixtral模型原生支持32K上下文（实测支持64K+）。用户可使用单一模型来解决不同长度的各类任务。
 
 ## 模型下载
 
@@ -103,12 +103,12 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 | 工具   | 特点     | CPU  | GPU  | 量化 | GUI  | API  | vLLM |                      教程                             |
 | :----------------------------------------------------------- | ---------------------------- | :--: | :--: | :--: | :--: | :--: | :--: |:--: |
-| [**llama.cpp**](https://github.com/ggerganov/llama.cpp)      | 丰富的量化选项和高效本地推理 |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ❌   | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/llamacpp_zh) |
-| [**🤗Transformers**](https://github.com/huggingface/transformers) | 原生transformers推理接口     |  ✅   |  ✅   |  ✅   |  ✅   |  ❌   |  ✅  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/inference_with_transformers_zh) |
-| [**仿OpenAI API调用**](https://platform.openai.com/docs/api-reference) | 仿OpenAI API接口的服务器Demo |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ✅  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/api_calls_zh) |
-| [**text-generation-webui**](https://github.com/oobabooga/text-generation-webui) | 前端Web UI界面的部署方式 |  ✅   |  ✅   |  ✅   |  ✅   |  ✅  | ❌  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/text-generation-webui_zh) |
-| [**LangChain**](https://github.com/hwchase17/langchain) | 适合二次开发的大模型应用开源框架 |  ✅  |  ✅   |  ✅   |  ❌   |  ❌   | ❌  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/langchain_zh) |
-| [**privateGPT**](https://github.com/imartinez/privateGPT) | 多文档本地问答框架 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/privategpt_zh) |
+| [llama.cpp](https://github.com/ggerganov/llama.cpp)      | 丰富的量化选项和高效本地推理 |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ❌   | [link] |
+| [🤗Transformers](https://github.com/huggingface/transformers) | 原生transformers推理接口     |  ✅   |  ✅   |  ✅   |  ✅   |  ❌   |  ✅  | [link] |
+| [仿OpenAI API调用](https://platform.openai.com/docs/api-reference) | 仿OpenAI API接口的服务器Demo |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ✅  | [link] |
+| [text-generation-webui](https://github.com/oobabooga/text-generation-webui) | 前端Web UI界面的部署方式 |  ✅   |  ✅   |  ✅   |  ✅   |  ✅  | ❌  | [link] |
+| [LangChain](https://github.com/hwchase17/langchain) | 适合二次开发的大模型应用开源框架 |  ✅  |  ✅   |  ✅   |  ❌   |  ❌   | ❌  | [link] |
+| [privateGPT](https://github.com/imartinez/privateGPT) | 多文档本地问答框架 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | [link] |
 
 
 ## 模型效果
@@ -206,7 +206,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 > - PPL（困惑度）：以4K上下文测量，数值越低越好
 > - 生成速度：提供了Apple M3 Max（Metal）以及NVIDIA A100（40G）的生成速度（单位ms/token），数值越低越好
 
-以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势。实测Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现。
+以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势。**实测Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现。**
 <p align="center">
     <br>
     <img src="./pics/chinese-mixtral-ppl.png" width="800"/>
@@ -227,17 +227,12 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 - 训练数据采用了[Chinese-LLaMA-Alpaca-2](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)项目中使用的指令数据，其总量约500万条指令数据
 - 训练代码及使用教程：[📖指令精调脚本Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/sft_scripts_zh)
 
-指令模板（单轮）：
+[指令模板](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1#instruction-format)：
 
 ```
-TBA
+<s> [INST] Instruction [/INST] Model answer</s> [INST] Follow-up instruction [/INST]
 ```
-
-指令模板（多轮）：
-
-```
-TBA
-```
+注意：`<s>`和`</s>`是表示序列开始和结束的特殊token，而`[INST]`和`[/INST]`则是普通字符串。
 
 ## 常见问题
 
