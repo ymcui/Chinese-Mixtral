@@ -19,11 +19,11 @@ import safetensors
 from safetensors.torch import load_file as safe_load_file
 
 
-parser = argparse.ArgumentParser(description='Script to merge Llama-2-hf with Chinese LLaMA-2 or Alpaca-2 LoRA weights')
+parser = argparse.ArgumentParser(description='Script to merge Mixtral-8x7B-v0.1 with Chinese-Mixtral-LoRA weights')
 parser.add_argument('--base_model', default=None, required=True,
-                    type=str, help="Base model path (basically Llama-2-hf)")
+                    type=str, help="Base model path (basically Mixtral-8x7B-v0.1)")
 parser.add_argument('--lora_model', default=None, required=True,
-                    type=str, help="LoRA model path (Chinese-LLaMA-2-LoRA, Chinese-Alpaca-2-LoRA)")
+                    type=str, help="LoRA model path (Chinese-Mixtral-LoRA, Chinese-Mixtral-Instruct-LoRA)")
 parser.add_argument('--output_dir', default='./merged_model',
                     type=str, help="Output path for the merged model")
 parser.add_argument('--verbose', default=False, action='store_true',
