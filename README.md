@@ -12,7 +12,7 @@
     <a href="https://app.codacy.com/gh/ymcui/Chinese-Mixtral/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/142d688425494644b5b156068f55370d"/></a>
 </p>
 
-本项目基于Mistral.ai发布的[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了**中文Mixtral**基础模型，并且进一步通过指令精调，得到了**中文Mixtral-Instruct**指令模型。该模型原生支持**32K上下文（实测支持64K+）**，能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
+本项目基于Mistral.ai发布的[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了**中文Mixtral**基础模型，并且进一步通过指令精调，得到了**中文Mixtral-Instruct**指令模型。该模型原生支持**32K上下文（实测可达128K）**，能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
 
 #### 本项目主要内容
 
@@ -29,7 +29,7 @@
 
 ## 新闻
 
-**[2024/??/??] 🚀 正式发布Chinese-Mixtral（基座模型），Chinese-Mixtral-Instruct（指令/chat模型）。详情查看：[📚v1.0版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)**
+**[2024/01/??] 🚀 正式发布Chinese-Mixtral（基座模型），Chinese-Mixtral-Instruct（指令/chat模型）。详情查看：[📚v1.0版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)**
 
 
 ## 内容导引
@@ -62,9 +62,9 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
     <br>
 </p>
 
-#### 🚄 原生支持32K上下文
+#### 🚄 原生支持32K上下文（实测支持128K+）
 
-与[Chinese-LLaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca)以及[Chinese-LLaMA-Alpaca-2](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)项目不同，Mixtral模型原生支持32K上下文（实测支持64K+）。用户可使用单一模型来解决不同长度的各类任务。
+与[Chinese-LLaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca)以及[Chinese-LLaMA-Alpaca-2](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)项目不同，Mixtral模型原生支持32K上下文（实测可达128K）。用户可使用单一模型来解决不同长度的各类任务。
 
 ## 模型下载
 
@@ -82,7 +82,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 | 基于什么模型训练 | 原版Mixtral-8x7B-v0.1 | 中文Mixtral |
 | 训练语料 | 无标注通用语料 | 有标注指令数据 |
 | 词表大小 | 原版词表，32000 | 原版词表，32000 |
-| 支持上下文长度 | 32K（实测支持64K+） | 32K（实测支持64K+） |
+| 支持上下文长度 | 32K（实测可达128K） | 32K（实测可达128K） |
 | 输入模板              | 不需要                                                 | 需要套用Mixtral-Instruct模板 |
 | 适用场景            | 文本续写：给定上文，让模型生成下文            | 指令理解：问答、写作、聊天、交互等 |
 | 不适用场景          | 指令理解 、多轮聊天等                                  |  文本无限制自由生成                                                       |
@@ -110,13 +110,13 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 | 工具   | 特点     | CPU  | GPU  | 量化 | GUI  | API  | vLLM |                      教程                             |
 | :----------------------------------------------------------- | ---------------------------- | :--: | :--: | :--: | :--: | :--: | :--: |:--: |
-| [llama.cpp](https://github.com/ggerganov/llama.cpp)      | 丰富的量化选项和高效本地推理 |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ❌   | [link] |
+| [llama.cpp](https://github.com/ggerganov/llama.cpp)      | 丰富的量化选项和高效本地推理 |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ❌   | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/llamacpp_zh) |
 | [🤗Transformers](https://github.com/huggingface/transformers) | 原生transformers推理接口     |  ✅   |  ✅   |  ✅   |  ✅   |  ❌   |  ✅  | [link] |
 | [仿OpenAI API调用](https://platform.openai.com/docs/api-reference) | 仿OpenAI API接口的服务器Demo |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ✅  | [link] |
 | [text-generation-webui](https://github.com/oobabooga/text-generation-webui) | 前端Web UI界面的部署方式 |  ✅   |  ✅   |  ✅   |  ✅   |  ✅  | ❌  | [link] |
 | [LangChain](https://github.com/hwchase17/langchain) | 适合二次开发的大模型应用开源框架 |  ✅  |  ✅   |  ✅   |  ❌   |  ❌   | ❌  | [link] |
 | [privateGPT](https://github.com/imartinez/privateGPT) | 多文档本地问答框架 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | [link] |
-| [LM Studio](https://lmstudio.ai) | 多平台聊天软件（带界面） | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | [link] |
+| [LM Studio](https://lmstudio.ai) | 多平台聊天软件（带界面） | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/lmstudio_zh) |
 
 
 ## 模型效果
@@ -125,36 +125,22 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 ### 生成效果评测
 
-为了更加直观地了解模型的生成效果，本项目仿照[Fastchat Chatbot Arena](https://chat.lmsys.org/?arena)推出了模型在线对战平台，可浏览和评测模型回复质量。对战平台提供了胜率、Elo评分等评测指标，并且可以查看两两模型的对战胜率等结果。
+- 本项目仿照[Fastchat Chatbot Arena](https://chat.lmsys.org/?arena)推出了模型在线对战平台，可浏览和评测模型回复质量。对战平台提供了胜率、Elo评分等评测指标，并且可以查看两两模型的对战胜率等结果。**⚔️ 模型竞技场：[http://llm-arena.ymcui.com](http://llm-arena.ymcui.com/)**
+- examples目录中提供了Chinese-Mixtral-Instruct与Chinese-Alpaca-2-13B的输出样例，并通过GPT-4进行了打分对比。**📄 输出样例对比：[examples](./examples)**
 
-**⚔️ 模型竞技场：[http://llm-arena.ymcui.com](http://llm-arena.ymcui.com/)**
-
-| 系统                         | 对战胜率（无平局） ↓ | Elo评分 |
-| ---------------------------- | :------------------: | :-----: |
-| **Chinese-Mixtral-Instruct** |                      |         |
-| Chinese-Alpaca-2-7B-RLHF     |                      |         |
-| Chinese-Alpaca-2-7B-64K      |                      |         |
-| Chinese-Alpaca-2-13B-16K     |                      |         |
-| Chinese-Alpaca-2-7B-16K      |                      |         |
-| Chinese-Alpaca-2-13B         |                      |         |
-| Chinese-Alpaca-2-7B          |                      |         |
-
-
-> [!NOTE]
-> 以上结果截至2023年9月1日。最新结果请进入[**⚔️竞技场**](http://llm-arena.ymcui.com/)进行查看。
 
 ### 客观效果评测
 
 #### C-Eval
 
-[C-Eval](https://cevalbenchmark.com)是一个全面的中文基础模型评估套件，其中验证集和测试集分别包含1.3K和12.3K个选择题，涵盖52个学科。实验结果以“zero-shot / 5-shot”进行呈现。C-Eval推理代码请参考本项目：[📖GitHub Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/ceval_zh)
+[C-Eval](https://cevalbenchmark.com)是一个全面的中文基础模型评估套件，其中验证集和测试集分别包含1.3K和12.3K个选择题，涵盖52个学科。C-Eval推理代码请参考本项目：[📖GitHub Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/ceval_zh)
 
 | Models             | 类型 | Valid (0-shot) | Valid (5-shot) | Test (0-shot) | Test (5-shot) |
 | ------------------------ | :------------: | :------------: | :-----------: | :-----------: | :-----------: |
-| **Chinese-Mixtral-Instruct** | 指令 |                |                |               |               |
-| **Chinese-Mixtral**      | 基座 |                |                |               |               |
-| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | | | | |
-| [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 47.3 | 54.6 | | |
+| **Chinese-Mixtral-Instruct** | 指令 | 51.7 | 55.0 | - | - |
+| **Chinese-Mixtral**      | 基座 | 45.8 | 54.2 | - | - |
+| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | 51.6 | 54.0 | - | - |
+| [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 47.3 | 54.6 | - | - |
 | Chinese-Alpaca-2-13B | 指令 | 44.3 | 45.9 | 42.6 | 44.0 |
 | Chinese-LLaMA-2-13B | 基座 | 40.6 | 42.7 | 38.0 | 41.6 |
 
@@ -165,9 +151,9 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 | Models             | 类型 | Test (0-shot) | Test (5-shot) |
 | ------------------------ | :------------: | :-----------: | :-----------: |
-| **Chinese-Mixtral-Instruct** | 指令 |               |               |
-| **Chinese-Mixtral**      | 基座 |  |  |
-| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | | |
+| **Chinese-Mixtral-Instruct** | 指令 | 50.0 | 53.0 |
+| **Chinese-Mixtral**      | 基座 | 42.5 | 51.0 |
+| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | 48.2 | 51.6 |
 | [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 44.3 | 51.6 |
 | Chinese-Alpaca-2-13B | 指令 |     43.2      |     45.5      |
 | Chinese-LLaMA-2-13B | 基座 |     38.9      |     42.5      |
@@ -178,22 +164,22 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 | Models             | 类型 | Valid (0-shot) | Valid (5-shot) | Test (0-shot) | Test (5-shot) |
 | ------------------------ | :------------: | :------------: | :-----------: | :-----------: | :-----------: |
-| **Chinese-Mixtral-Instruct** | 指令 |                |                |               |               |
-| **Chinese-Mixtral**     | 基座 |                |                |               |               |
-| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | | | | |
-| [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | | | | |
+| **Chinese-Mixtral-Instruct** | 指令 | 65.1 | 69.6 | 67.5 | ? |
+| **Chinese-Mixtral**     | 基座 | 63.2 | 67.1 | 65.5 | 68.3 |
+| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | 68.5 | 70.4 | 68.2 | 70.2 |
+| [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 64.9 | 69.0 | 67.0 | 69.5 |
 | Chinese-Alpaca-2-13B | 指令 |                |                |               |               |
 | Chinese-LLaMA-2-13B | 基座 |                |                |               |               |
 
-### 长上下文版模型评测
+#### LongBench
 
-[LongBench](https://github.com/THUDM/LongBench)是一个大模型长文本理解能力的评测基准，由6大类、20个不同的任务组成，多数任务的平均长度在5K-15K之间，共包含约4.75K条测试数据。以下是本项目长上下文版模型在该中文任务（含代码任务）上的评测效果。LongBench推理代码请参考本项目：[📖GitHub Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/longbench_zh)
+[LongBench](https://github.com/THUDM/LongBench)是一个大模型长文本理解能力的评测基准，由6大类、20个不同的任务组成，多数任务的平均长度在5K-15K之间，共包含约4.75K条测试数据。以下是本项目模型在该中文任务（含代码任务）上的评测效果。LongBench推理代码请参考本项目：[📖GitHub Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/longbench_zh)
 
 | Models                                                       | 单文档QA | 多文档QA | 摘要 | FS学习 | 代码补全 | 合成任务 | 平均 |
 | ------------------------------------------------------------ | :------: | :------: | :--: | :----: | :------: | :------: | :--: |
 | **Chinese-Mixtral-Instruct**                                 |          |          |      |        |          |          |      |
 | **Chinese-Mixtral**                                          |          |          |      |        |          |          |      |
-| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) |          |          |      |        |          |          |      |
+| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) |   56.5   |   35.7   | 15.4 |  46.0  |   63.6   |   98.0   | 52.5 |
 | [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) |   35.5   |   9.5    | 16.4 |  46.5  |   57.2   |   83.5   | 41.4 |
 | Chinese-Alpaca-2-13B-16K                                     |   47.9   |   26.7   | 13.0 |  22.3  |   46.6   |   21.5   | 29.7 |
 | Chinese-LLaMA-2-13B-16K                                      |   36.7   |   17.7   | 3.1  |  29.8  |   13.8   |   3.0    | 17.3 |
@@ -219,7 +205,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 > - PPL（困惑度）：以4K上下文测量，数值越低越好
 > - 生成速度：提供了Apple M3 Max（Metal）以及NVIDIA A100（40G）的生成速度（单位ms/token），数值越低越好
 
-以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势。**实测Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现。**
+以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势，选取了2组不同的纯文本数据。实验结果表明**Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现（实测128K+）。**
 <p align="center">
     <br>
     <img src="./pics/chinese-mixtral-ppl.png" width="800"/>
@@ -252,7 +238,9 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 请在提Issue前务必先查看FAQ中是否已存在解决方案。具体问题和解答请参考本项目 [📖GitHub Wiki](https://github.com/ymcui/Chinese-Mixtral/wiki/faq_zh)
 
 ```
-TBA
+问题1：后续会不会用更多数据进行训练？会不会做RLHF/DPO对齐？
+问题2：为什么本次的模型没有做中文词表扩展？
+问题3：是否支持Mixtral的下游生态？
 ```
 
 
