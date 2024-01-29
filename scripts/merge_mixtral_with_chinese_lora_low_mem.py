@@ -91,7 +91,7 @@ if __name__=='__main__':
     if not os.path.exists(base_model_path):
         print("Cannot find lora model on the disk. Downloading lora model from hub...")
         base_model_path = snapshot_download(repo_id=base_model_path)
-    ckpt_filenames = sorted([f for f in os.listdir(base_model_path) if re.match('model-(\d+)-of-(\d+).safetensors',f)])
+    ckpt_filenames = sorted([f for f in os.listdir(base_model_path) if re.match(r'model-(\d+)-of-(\d+).safetensors',f)])
     if len(ckpt_filenames) == 0:
         raise FileNotFoundError(f"Cannot find base model checkpoints in ${base_model_path}. Please make sure the checkpoints are saved in the HF format.")
     total_size = 0
@@ -105,19 +105,18 @@ if __name__=='__main__':
         for k in state_dict:
             for tl_idx, t_and_l in enumerate(tokenizers_and_loras):
                 saved_key = 'base_model.model.'+k
-                lora_key_A = saved_key.replace('.weight','.lora_A.weight')
+                lora_key_a = saved_key.replace('.weight','.lora_A.weight')
                 if saved_key in t_and_l['state_dict']:
                     if args.verbose:
                         print(f"copying {saved_key} from {tl_idx}-th LoRA weight to {k}")
                     state_dict[k] = t_and_l['state_dict'][saved_key].half().clone() # do we need half()?
-                if lora_key_A in t_and_l['state_dict']:
-                    lora_key_B = lora_key_A.replace('lora_A.weight','lora_B.weight')
+                if lora_key_a in t_and_l['state_dict']:
+                    lora_key_b = lora_key_a.replace('lora_A.weight','lora_B.weight')
                     if args.verbose:
-                        print(f"merging {lora_key_A} and lora_B.weight form {tl_idx}-th LoRA weight to {k}")
+                        print(f"merging {lora_key_a} and lora_B.weight form {tl_idx}-th LoRA weight to {k}")
                     state_dict[k] += (
                         transpose(
-                            t_and_l['state_dict'][lora_key_B].float()
-                          @ t_and_l['state_dict'][lora_key_A].float(), t_and_l['fan_in_fan_out']) * t_and_l['scaling']
+                            t_and_l['state_dict'][lora_key_b].float() @ t_and_l['state_dict'][lora_key_a].float(), t_and_l['fan_in_fan_out']) * t_and_l['scaling']
                     )
             weight_size = state_dict[k].numel() * dtype_byte_size(state_dict[k].dtype)
             total_size += weight_size
