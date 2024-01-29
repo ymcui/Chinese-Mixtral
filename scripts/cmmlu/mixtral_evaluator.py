@@ -237,5 +237,4 @@ class Mixtral_Evaluator(Evaluator):
         if len(m) >= 1:
             answer = choices_dict[m[0]]
             return answer, False
-        # pylint: disable=B311
-        return  random.choice('ABCD'), False
+        return  random.sample('ABCD', 1)[0], False
