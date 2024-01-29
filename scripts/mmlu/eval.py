@@ -10,9 +10,9 @@ choices = ["A", "B", "C", "D"]
 
 
 def format_subject(subject):
-    l = subject.split("_")
+    line = subject.split("_")
     s = ""
-    for entry in l:
+    for entry in line:
         s += " " + entry
     return s
 
@@ -40,7 +40,7 @@ def gen_prompt(train_df, subject, k=-1):
 
 
 @torch.no_grad()
-def eval(args, subject, model, tokenizer, dev_df, test_df):
+def mmlu_eval(args, subject, model, tokenizer, dev_df, test_df):
     cors = []
     all_probs = []
 
@@ -107,7 +107,6 @@ def main(args):
         device_map='auto',
         attn_implementation="flash_attention_2" if args.use_flash_attention_2 else "sdpa"
         ).eval()
-    
     subjects = sorted(
         [
             f.split("_test.csv")[0]
@@ -140,7 +139,7 @@ def main(args):
                 os.path.join(args.data_dir, "val", subject + "_val.csv"), header=None
             )
 
-        cors, _, probs = eval(args, subject, model, tokenizer, dev_df, test_df)
+        cors, _, probs = mmlu_eval(args, subject, model, tokenizer, dev_df, test_df)
         subcats = subcategories[subject]
         for subcat in subcats:
             subcat_cors[subcat].append(cors)

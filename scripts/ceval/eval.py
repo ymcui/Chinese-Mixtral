@@ -92,7 +92,6 @@ if __name__ == "__main__":
     parser.add_argument("--verbose", action="store_true", help="Print detailed information of each example.")
     parser.add_argument("--load_in_4bit", action="store_true", help="The model was loaded by 4-bit quantization")
     parser.add_argument("--use_flash_attention_2", action="store_true", help="Use flash_attention2 to replace the mixtral attention")
-    
     args = parser.parse_args()
 
     args.cot = args.cot == "True"
