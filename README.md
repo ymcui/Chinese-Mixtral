@@ -12,7 +12,6 @@
     <a href="https://app.codacy.com/gh/ymcui/Chinese-Mixtral/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/142d688425494644b5b156068f55370d"/></a>
 </p>
 
-
 本项目基于Mistral.ai发布的[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了**中文Mixtral**基础模型，并且进一步通过指令精调，得到了**中文Mixtral-Instruct**指令模型。该模型原生支持**32K上下文（实测可达128K）**，能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
 
 #### 本项目主要内容
@@ -86,7 +85,6 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 | 支持上下文长度 | 32K（实测可达128K） | 32K（实测可达128K） |
 | 输入模板              | 不需要                                                 | 需要套用Mixtral-Instruct模板 |
 | 适用场景            | 文本续写：给定上文，让模型生成下文            | 指令理解：问答、写作、聊天、交互等 |
-| 不适用场景          | 指令理解 、多轮聊天等                                  |  文本无限制自由生成                                                       |
 
 
 ### 下载地址
@@ -144,7 +142,6 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 | [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 47.3 | 54.6 | - | - |
 | Chinese-Alpaca-2-13B | 指令 | 44.3 | 45.9 | 42.6 | 44.0 |
 | Chinese-LLaMA-2-13B | 基座 | 40.6 | 42.7 | 38.0 | 41.6 |
-
 
 #### CMMLU
 
@@ -207,6 +204,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 > - 生成速度：提供了Apple M3 Max（Metal）以及NVIDIA A100（40G）的生成速度（单位ms/token），数值越低越好
 
 以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势，选取了2组不同的纯文本数据。实验结果表明**Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现（实测可达128K）。**
+
 <p align="center">
     <br>
     <img src="./pics/chinese-mixtral-ppl.png" width="800"/>
@@ -256,8 +254,10 @@ TBA
 
 
 ## 问题反馈
+
 如有疑问，请在GitHub Issue中提交。礼貌地提出问题，构建和谐的讨论社区。
 
 - 在提交问题之前，请先查看FAQ能否解决问题，同时建议查阅以往的issue是否能解决你的问题。
 - 提交问题请使用本项目设置的Issue模板，以帮助快速定位具体问题。
 - 重复以及与本项目无关的issue会被[stable-bot](https://github.com/marketplace/stale)处理，敬请谅解。
+- 
