@@ -87,7 +87,7 @@ if __name__=='__main__':
             "scaling": lora_config.lora_alpha / lora_config.r,
             "fan_in_fan_out" : lora_config.fan_in_fan_out,
         })
-    
+
     if not os.path.exists(base_model_path):
         print("Cannot find lora model on the disk. Downloading lora model from hub...")
         base_model_path = snapshot_download(repo_id=base_model_path)
