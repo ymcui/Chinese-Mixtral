@@ -29,7 +29,7 @@
 
 ## 新闻
 
-**[2024/01/??] 🚀 正式发布Chinese-Mixtral（基座模型），Chinese-Mixtral-Instruct（指令/chat模型）。详情查看：[📚v1.0版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)**
+**[2024/01/29] 🚀 正式发布Chinese-Mixtral（基座模型），Chinese-Mixtral-Instruct（指令/chat模型）。详情查看：[📚v1.0版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)**
 
 
 ## 内容导引
@@ -93,13 +93,13 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 以下提供了3种不同类型的模型：
 
 - **完整版模型**：直接下载即可使用，无需其他合并步骤，推荐网络带宽充足的用户；
-- **LoRA版模型**：无法单独使用，必须与原版[Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)合并才能转为完整版模型，推荐网络带宽不足且手头有原版Mixtral的用户。合并方法请参阅：【LINK-TBA】
+- **LoRA版模型**：无法单独使用，必须与原版[Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)合并才能转为完整版模型，推荐网络带宽不足且手头有原版Mixtral的用户。合并方法请参阅：[**💻 模型合并步骤**](https://github.com/ymcui/Chinese-Mixtral/wiki/model_conversion_zh)
 - **GGUF版模型**：兼容[llama.cpp](https://github.com/ggerganov/llama.cpp)等工具的GGUF量化版模型，推荐只需要做推理部署的用户下载。
 
 | 模型名称                  |   类型   |                    完整版（94 GB）                    |                    LoRA版（2.4 GB）                    |                    GGUF版                    |
 | :------------------------ | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | Chinese-Mixtral | 基座模型 | [[Baidu]](https://pan.baidu.com/s/1nwJ8JkMTUrCkDEccg7C9Pw?pwd=33kb) [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral) | [[Baidu]](https://pan.baidu.com/s/1XRw2-rumi-Pg0CrXqEh8ug?pwd=8gjk) [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-lora) | [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-gguf) |
-| Chinese-Mixtral-Instruct | 指令模型 | [Baidu] [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct) | [Baidu] [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct-lora) | [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct-gguf) |
+| Chinese-Mixtral-Instruct | 指令模型 | [[Baidu]](https://pan.baidu.com/s/1ogGipoWgTsojGai5cSxdoQ?pwd=dq7x) [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct) | [[Baidu]](https://pan.baidu.com/s/1hX_mrYE1U1FlUEToclEOwA?pwd=h2ng) [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct-lora) | [[🤗HF]](https://huggingface.co/hfl/chinese-mixtral-instruct-gguf) |
 
 > [!NOTE]
 > 若无法访问HF，可考虑一些镜像站点（如hf-mirror.com），具体方法请自行查找解决。
