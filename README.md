@@ -137,8 +137,8 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 | Models             | 类型 | Valid (0-shot) | Valid (5-shot) | Test (0-shot) | Test (5-shot) |
 | ------------------------ | :------------: | :------------: | :-----------: | :-----------: | :-----------: |
-| **Chinese-Mixtral-Instruct** | 指令 | 51.7 | 55.0 | - | - |
-| **Chinese-Mixtral**      | 基座 | 45.8 | 54.2 | - | - |
+| **Chinese-Mixtral-Instruct** | 指令 | 51.7 | 55.0 | 50.0 | 51.5 |
+| **Chinese-Mixtral**      | 基座 | 45.8 | 54.2 | 43.1 | 49.1 |
 | [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | 51.6 | 54.0 | - | - |
 | [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 47.3 | 54.6 | - | - |
 | Chinese-Alpaca-2-13B | 指令 | 44.3 | 45.9 | 42.6 | 44.0 |
@@ -164,12 +164,12 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 | Models             | 类型 | Valid (0-shot) | Valid (5-shot) | Test (0-shot) | Test (5-shot) |
 | ------------------------ | :------------: | :------------: | :-----------: | :-----------: | :-----------: |
-| **Chinese-Mixtral-Instruct** | 指令 | 65.1 | 69.6 | 67.5 | ? |
+| **Chinese-Mixtral-Instruct** | 指令 | 65.1 | 69.6 | 67.5 | 69.8 |
 | **Chinese-Mixtral**     | 基座 | 63.2 | 67.1 | 65.5 | 68.3 |
 | [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | 68.5 | 70.4 | 68.2 | 70.2 |
 | [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 64.9 | 69.0 | 67.0 | 69.5 |
-| Chinese-Alpaca-2-13B | 指令 |                |                |               |               |
-| Chinese-LLaMA-2-13B | 基座 |                |                |               |               |
+| Chinese-Alpaca-2-13B | 指令 | 49.6 | 53.2 | 50.9 | 53.5 |
+| Chinese-LLaMA-2-13B | 基座 | 46.8 | 50.0 | 46.6 | 51.8 |
 
 #### LongBench
 
@@ -177,8 +177,8 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 | Models                                                       | 单文档QA | 多文档QA | 摘要 | FS学习 | 代码补全 | 合成任务 | 平均 |
 | ------------------------------------------------------------ | :------: | :------: | :--: | :----: | :------: | :------: | :--: |
-| **Chinese-Mixtral-Instruct**                                 |          |          |      |        |          |          |      |
-| **Chinese-Mixtral**                                          |          |          |      |        |          |          |      |
+| **Chinese-Mixtral-Instruct**                                 |   50.3   |   34.2   | 16.4 |  42.0  |   56.1   |   89.5   | 48.1 |
+| **Chinese-Mixtral**                                          |   32.0   |   23.7   | 0.4  |  42.5  |   27.4   |   14.0   | 23.3 |
 | [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) |   56.5   |   35.7   | 15.4 |  46.0  |   63.6   |   98.0   | 52.5 |
 | [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) |   35.5   |   9.5    | 16.4 |  46.5  |   57.2   |   83.5   | 41.4 |
 | Chinese-Alpaca-2-13B-16K                                     |   47.9   |   26.7   | 13.0 |  22.3  |   46.6   |   21.5   | 29.7 |
