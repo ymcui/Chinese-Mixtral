@@ -35,7 +35,7 @@ if args.only_cpu is True:
 
 os.environ["CUDA_VISIBLE_DEVICES"] = args.gpus
 import torch
-from transformers import AutoModelForCausalLM, AutoModelForCausalLM, LlamaTokenizer
+from transformers import AutoModelForCausalLM, LlamaTokenizer
 from transformers import GenerationConfig
 from transformers import BitsAndBytesConfig
 if args.use_vllm:
@@ -69,6 +69,7 @@ sample_data = ["为什么要减少污染，保护环境？"]
 
 def generate_prompt(instruction):
     return TEMPLATE.format_map({'instruction': instruction})
+
 
 if __name__ == '__main__':
     load_type = torch.float16
@@ -116,7 +117,7 @@ if __name__ == '__main__':
         examples = sample_data
     else:
         with open(args.data_file,'r') as f:
-            examples = [l.strip() for l in f.readlines()]
+            examples = [line.strip() for line in f.readlines()]
         print("first 10 examples:")
         for example in examples[:10]:
             print(example)
