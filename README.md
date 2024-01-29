@@ -63,7 +63,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
     <br>
 </p>
 
-#### 🚄 原生支持32K上下文（实测支持128K+）
+#### 🚄 原生支持32K上下文（实测支持128K）
 
 与[Chinese-LLaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca)以及[Chinese-LLaMA-Alpaca-2](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)项目不同，Mixtral模型原生支持32K上下文（实测可达128K）。用户可使用单一模型来解决不同长度的各类任务。
 
@@ -206,7 +206,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 > - PPL（困惑度）：以4K上下文测量，数值越低越好
 > - 生成速度：提供了Apple M3 Max（Metal）以及NVIDIA A100（40G）的生成速度（单位ms/token），数值越低越好
 
-以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势，选取了2组不同的纯文本数据。实验结果表明**Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现（实测128K+）。**
+以Chinese-Mixtral-Q4_0为例，下图展示了不同上下文长度下的PPL变化趋势，选取了2组不同的纯文本数据。实验结果表明**Mixtral模型支持的上下文长度已超过标称的32K，在64K+上下文下仍然具有较好的表现（实测可达128K）。**
 <p align="center">
     <br>
     <img src="./pics/chinese-mixtral-ppl.png" width="800"/>
