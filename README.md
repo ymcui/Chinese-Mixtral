@@ -12,6 +12,7 @@
     <a href="https://app.codacy.com/gh/ymcui/Chinese-Mixtral/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/142d688425494644b5b156068f55370d"/></a>
 </p>
 
+
 本项目基于Mistral.ai发布的[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了**中文Mixtral**基础模型，并且进一步通过指令精调，得到了**中文Mixtral-Instruct**指令模型。该模型原生支持**32K上下文（实测可达128K）**，能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
 
 #### 本项目主要内容
@@ -126,7 +127,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 ### 生成效果评测
 
 - 本项目仿照[Fastchat Chatbot Arena](https://chat.lmsys.org/?arena)推出了模型在线对战平台，可浏览和评测模型回复质量。对战平台提供了胜率、Elo评分等评测指标，并且可以查看两两模型的对战胜率等结果。**⚔️ 模型竞技场：[http://llm-arena.ymcui.com](http://llm-arena.ymcui.com/)**
-- examples目录中提供了Chinese-Mixtral-Instruct与Chinese-Alpaca-2-13B的输出样例，并通过GPT-4进行了打分对比。**📄 输出样例对比：[examples](./examples)**
+- examples目录中提供了Chinese-Mixtral-Instruct与Chinese-Alpaca-2-13B的输出样例，并通过GPT-4进行了打分对比，**Chinese-Mixtral-Instruct平均得分为8.20、Chinese-Alpaca-2-13B平均得分为7.05**。**📄 输出样例对比：[examples](./examples)**
 
 
 ### 客观效果评测

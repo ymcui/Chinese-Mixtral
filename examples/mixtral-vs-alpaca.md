@@ -24,7 +24,7 @@
 
 - Chinese-Mixtral-Instruct：**8.20**
 - Chinese-Alpaca-2-13B：7.05
-- GPT-4的详细评分结果见：
+- GPT-4的详细评分结果见：[💯 GPT-4打分细节](./mixtral-vs-alpaca-gpt4rating.md)
 
 ## 输出结果
 
