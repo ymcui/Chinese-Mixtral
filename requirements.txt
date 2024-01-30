@@ -1,0 +1,7 @@
+peft==0.7.1
+torch>=2.0.1
+transformers==4.37.2
+sentencepiece==0.1.99
+bitsandbytes==0.42.0
+datasets
+safetensors
