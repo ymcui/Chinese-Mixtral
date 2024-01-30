@@ -138,8 +138,8 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 | ------------------------ | :------------: | :------------: | :-----------: | :-----------: | :-----------: |
 | **Chinese-Mixtral-Instruct** | 指令 | 51.7 | 55.0 | 50.0 | 51.5 |
 | **Chinese-Mixtral**      | 基座 | 45.8 | 54.2 | 43.1 | 49.1 |
-| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | 51.6 | 54.0 | - | - |
-| [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 47.3 | 54.6 | - | - |
+| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | 指令 | 51.6 | 54.0 | 48.7 | 50.7 |
+| [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | 基座 | 47.3 | 54.6 | 46.1 | 50.3 |
 | Chinese-Alpaca-2-13B | 指令 | 44.3 | 45.9 | 42.6 | 44.0 |
 | Chinese-LLaMA-2-13B | 基座 | 40.6 | 42.7 | 38.0 | 41.6 |
 
@@ -260,4 +260,3 @@ TBA
 - 在提交问题之前，请先查看FAQ能否解决问题，同时建议查阅以往的issue是否能解决你的问题。
 - 提交问题请使用本项目设置的Issue模板，以帮助快速定位具体问题。
 - 重复以及与本项目无关的issue会被[stable-bot](https://github.com/marketplace/stale)处理，敬请谅解。
-- 

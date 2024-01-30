@@ -108,7 +108,7 @@ Three different types of models are provided below:
 The related models in this project mainly support the following quantization, inference, and deployment methods, please refer to the respective tutorials for specific content.
 
 | Tool                                                         | Features                                                     | CPU  | GPU  | Quantization | GUI  | API  | vLLM | Tutorial                                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | :--: | :--: | :----------: | :--: | :--: | :--: | ------------------------------------------------------------ |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | :--: | :--: | :----------: | :--: | :--: | :--: | :----------------------------------------------------------: |
 | [llama.cpp](https://github.com/ggerganov/llama.cpp)          | Rich quantization options and efficient local inference      |  ✅   |  ✅   |      ✅       |  ❌   |  ✅   |  ❌   | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/llamacpp_en) |
 | [🤗Transformers](https://github.com/huggingface/transformers) | Native transformers inference interface                      |  ✅   |  ✅   |      ✅       |  ✅   |  ❌   |  ✅   | [link]                                                       |
 | [Imitation OpenAI API Call](https://platform.openai.com/docs/api-reference) | Server Demo with OpenAI API-like interface                   |  ✅   |  ✅   |      ✅       |  ❌   |  ✅   |  ✅   | [link]                                                       |
@@ -138,8 +138,8 @@ To evaluate the effectiveness of the related models, this project conducted both
 | ------------------------------------------------------------ | :--: | :------------: | :------------: | :-----------: | :-----------: |
 | **Chinese-Mixtral-Instruct**                                 | chat |      51.7      |      55.0      |     50.0      |     51.5      |
 | **Chinese-Mixtral**                                          | base |      45.8      |      54.2      |     43.1      |     49.1      |
-| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | chat |      51.6      |      54.0      |       -       |       -       |
-| [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | base |      47.3      |      54.6      |       -       |       -       |
+| [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) | chat |      51.6      |      54.0      |     48.7      |     50.7      |
+| [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) | base |      47.3      |      54.6      |     46.1      |     50.3      |
 | Chinese-Alpaca-2-13B                                         | chat |      44.3      |      45.9      |     42.6      |     44.0      |
 | Chinese-LLaMA-2-13B                                          | base |      40.6      |      42.7      |     38.0      |     41.6      |
 
