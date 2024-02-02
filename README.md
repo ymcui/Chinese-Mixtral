@@ -110,9 +110,9 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 | 工具   | 特点     | CPU  | GPU  | 量化 | GUI  | API  | vLLM |                      教程                             |
 | :----------------------------------------------------------- | ---------------------------- | :--: | :--: | :--: | :--: | :--: | :--: |:--: |
 | [llama.cpp](https://github.com/ggerganov/llama.cpp)      | 丰富的量化选项和高效本地推理 |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ❌   | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/llamacpp_zh) |
-| [🤗Transformers](https://github.com/huggingface/transformers) | 原生transformers推理接口     |  ✅   |  ✅   |  ✅   |  ✅   |  ❌   |  ✅  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/inference_with_transformers_zh) |
+| [🤗Transformers](https://github.com/huggingface/transformers) | 原生transformers推理接口     |  ✅   |  ✅   |  ✅   |  ✅   |  ❌   |  ✅  | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/inference_with_transformers_zh) |
 | [仿OpenAI API调用](https://platform.openai.com/docs/api-reference) | 仿OpenAI API接口的服务器Demo |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ✅  | [link] |
-| [text-generation-webui](https://github.com/oobabooga/text-generation-webui) | 前端Web UI界面的部署方式 |  ✅   |  ✅   |  ✅   |  ✅   |  ✅  | ❌  | [link](https://github.com/ymcui/Chinese-Mixtral/wiki/text-generation-webui_zh) |
+| [text-generation-webui](https://github.com/oobabooga/text-generation-webui) | 前端Web UI界面的部署方式 |  ✅   |  ✅   |  ✅   |  ✅   |  ✅  | ❌  | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/text-generation-webui_zh) |
 | [LangChain](https://github.com/hwchase17/langchain) | 适合二次开发的大模型应用开源框架 |  ✅  |  ✅   |  ✅   |  ❌   |  ❌   | ❌  | [link] |
 | [privateGPT](https://github.com/imartinez/privateGPT) | 多文档本地问答框架 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | [link] |
 | [LM Studio](https://lmstudio.ai) | 多平台聊天软件（带界面） | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/lmstudio_zh) |
@@ -245,7 +245,14 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 
 ## 引用
 
-TBA
+```tex
+@misc{chinese-mixtral,
+  title={Chinese Mixtral},
+  author={Cui, Yiming and Yao, Xin},
+  howpublished={\url{https://github.com/ymcui/Chinese-Mixtral}},
+  year={2024}
+}
+```
 
 
 ## 免责声明
