@@ -300,7 +300,7 @@ def main():
                 data_path=files,
                 tokenizer=tokenizer,
                 max_seq_length=data_args.max_seq_length,
-                data_cache_dir = None,
+                data_cache_dir=None,
                 preprocessing_num_workers = data_args.preprocessing_num_workers)
         logger.info(f"Num eval_samples  {len(eval_dataset)}")
         logger.info("Evaluation example:")
@@ -313,8 +313,6 @@ def main():
     )
     compute_dtype = (torch.float16 if training_args.fp16 else (torch.bfloat16 if training_args.bf16 else torch.float32))
     if training_args.load_in_kbits in [4, 8]:
-        load_in_4bit = training_args.load_in_kbits == 4
-        load_in_8bit = training_args.load_in_kbits == 8
         if training_args.modules_to_save is not None:
             load_in_8bit_skip_modules = training_args.modules_to_save.split(',')
         else:

@@ -46,7 +46,6 @@ from transformers import (
     HfArgumentParser,
     Trainer,
     TrainingArguments,
-    is_torch_tpu_available,
     set_seed,
     BitsAndBytesConfig
 )
@@ -275,7 +274,6 @@ logger = logging.getLogger(__name__)
 
 
 def main():
-
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, MyTrainingArguments))
     if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
         # If we pass only one argument to the script and it's the path to a json file,
@@ -455,7 +453,6 @@ def main():
             if idx == 0:
                 lm_datasets = processed_dataset['train']
             else:
-                assert lm_datasets.features.type == processed_dataset["train"].features.type
                 lm_datasets = concatenate_datasets([lm_datasets, processed_dataset["train"]])
         lm_datasets = lm_datasets.train_test_split(test_size = data_args.validation_split_percentage)
 
@@ -477,8 +474,6 @@ def main():
         logger.info(tokenizer.decode(eval_dataset[0]['input_ids']))
     compute_dtype = (torch.float16 if training_args.fp16 else (torch.bfloat16 if training_args.bf16 else torch.float32))
     if training_args.load_in_kbits in [4, 8]:
-        load_in_4bit = training_args.load_in_kbits == 4
-        load_in_8bit = training_args.load_in_kbits == 8
         if training_args.modules_to_save is not None:
             load_in_8bit_skip_modules = training_args.modules_to_save.split(',')
         else:
