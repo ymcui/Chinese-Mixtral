@@ -14,6 +14,8 @@
 
 本项目基于Mistral.ai发布的[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了**中文Mixtral**基础模型，并且进一步通过指令精调，得到了**中文Mixtral-Instruct**指令模型。该模型原生支持**32K上下文（实测可达128K）**，能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
 
+**技术报告**：[[Cui and Yao, 2024] Rethinking LLM Language Adaptation: A Case Study on Chinese Mixtral](https://arxiv.org/abs/2403.01851)
+
 #### 本项目主要内容
 
 - 🚀 开源中文Mixtral基础模型，该模型在[Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)的基础上进行了中文增量训练
@@ -29,7 +31,9 @@
 
 ## 新闻
 
-**[2024/01/29] 🚀 正式发布Chinese-Mixtral（基座模型），Chinese-Mixtral-Instruct（指令/chat模型）。详情查看：[📚v1.0版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)**
+**[2024/03/05] 开源模型训练和精调代码，发布技术报告。详情查看：[📚v1.1版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)**
+
+[2024/01/29] 🚀 正式发布Chinese-Mixtral（基座模型），Chinese-Mixtral-Instruct（指令/chat模型）。详情查看：[📚v1.0版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)
 
 
 ## 内容导引
@@ -246,11 +250,12 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 ## 引用
 
 ```tex
-@misc{chinese-mixtral,
-  title={Chinese Mixtral},
-  author={Cui, Yiming and Yao, Xin},
-  howpublished={\url{https://github.com/ymcui/Chinese-Mixtral}},
-  year={2024}
+@article{chinese-mixtral,
+      title={Rethinking LLM Language Adaptation: A Case Study on Chinese Mixtral}, 
+      author={Cui, Yiming and Yao, Xin},
+      journal={arXiv preprint arXiv:2403.01851},
+      url={https://arxiv.org/abs/2403.01851},
+      year={2024}
 }
 ```
 

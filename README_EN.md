@@ -14,6 +14,8 @@
 
 This project is developed based on the [Mixtral model](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) released by Mistral.ai, which utilizes a Sparse Mixture of Experts (MoE) architecture. This project involves the use of large-scale Chinese unannotated data for incremental training in Chinese, resulting in the **Chinese Mixtral** base model. Further fine-tuning with instructions led to the creation of the **Chinese Mixtral-Instruct** instruction model. This model natively supports a **32K context (tested up to 128K)** and is capable of effectively processing long texts, while also showing significant performance improvements in areas like mathematical reasoning and code generation. When using llama.cpp for quantized inference, a minimum of only 16GB of memory (or VRAM) is required.
 
+**Paper**: [[Cui and Yao, 2024] Rethinking LLM Language Adaptation: A Case Study on Chinese Mixtral](https://arxiv.org/abs/2403.01851)
+
 #### Main Contents of This Project
 
 - 🚀 Open-sourced Chinese Mixtral base model, incrementally trained in Chinese on top of [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)
@@ -29,7 +31,9 @@ This project is developed based on the [Mixtral model](https://huggingface.co/mi
 
 ## News
 
-**[2024/01/29] 🚀 Official release of Chinese-Mixtral (Base Model), Chinese-Mixtral-Instruct (Instruction/Chat Model). For more details, see: [📚 Version 1.0 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)**
+**[2024/03/05] Release pre-training and fine-tuning scripts. Technical reports are also available. See: [📚 v1.1 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)**
+
+[2024/01/29] 🚀 Official release of Chinese-Mixtral (Base Model), Chinese-Mixtral-Instruct (Instruction/Chat Model). For more details, see: [📚 v1.0 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)
 
 
 ## Content Guide
@@ -246,11 +250,12 @@ Question 3: Is the downstream ecosystem of Mixtral supported?
 ## Citation
 
 ```tex
-@misc{chinese-mixtral,
-  title={Chinese Mixtral},
-  author={Cui, Yiming and Yao, Xin},
-  howpublished={\url{https://github.com/ymcui/Chinese-Mixtral}},
-  year={2024}
+@article{chinese-mixtral,
+      title={Rethinking LLM Language Adaptation: A Case Study on Chinese Mixtral}, 
+      author={Cui, Yiming and Yao, Xin},
+      journal={arXiv preprint arXiv:2403.01851},
+      url={https://arxiv.org/abs/2403.01851},
+      year={2024}
 }
 ```
 
