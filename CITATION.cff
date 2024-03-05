@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite our paper as below."
+authors:
+- family-names: "Cui"
+  given-names: "Yiming"
+  orcid: "https://orcid.org/0000-0002-2452-375X"
+- family-names: "Yao"
+  given-names: "Xin"  
+title: "Chinese Mixtral"
+version: 1.0
+date-released: 2024-03-05
+url: "https://github.com/ymcui/Chinese-Mixtral"
+preferred-citation: 
+  type: article
+  authors:
+  - family-names: "Cui"
+    given-names: "Yiming"
+    orcid: "https://orcid.org/0000-0002-2452-375X"
+  - family-names: "Yao"
+    given-names: "Xin"  
+  title: "Rethinking LLM Language Adaptation: A Case Study on Chinese Mixtral"
+  journal: "arXiv pre-print"
+  year: 2024
+  url: "https://arxiv.org/abs/2403.01851"
