@@ -11,6 +11,7 @@
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ymcui/Chinese-Mixtral">
     <a href="https://app.codacy.com/gh/ymcui/Chinese-Mixtral/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/142d688425494644b5b156068f55370d"/></a>
 </p>
+
 This project is developed based on the [Mixtral model](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) released by Mistral.ai, which utilizes a Sparse Mixture of Experts (MoE) architecture. This project involves the use of large-scale Chinese unannotated data for incremental training in Chinese, resulting in the **Chinese Mixtral** base model. Further fine-tuning with instructions led to the creation of the **Chinese Mixtral-Instruct** instruction model. This model natively supports a **32K context (tested up to 128K)** and is capable of effectively processing long texts, while also showing significant performance improvements in areas like mathematical reasoning and code generation. When using llama.cpp for quantized inference, a minimum of only 16GB of memory (or VRAM) is required.
 
 **Paper**: [[Cui and Yao, 2024] Rethinking LLM Language Adaptation: A Case Study on Chinese Mixtral](https://arxiv.org/abs/2403.01851)
