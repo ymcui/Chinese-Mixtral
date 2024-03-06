@@ -14,7 +14,7 @@
 
 本项目基于Mistral.ai发布的[Mixtral模型](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了**中文Mixtral**基础模型，并且进一步通过指令精调，得到了**中文Mixtral-Instruct**指令模型。该模型原生支持**32K上下文（实测可达128K）**，能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
 
-**技术报告**：[[Cui and Yao, 2024] Rethinking LLM Language Adaptation: A Case Study on Chinese Mixtral](https://arxiv.org/abs/2403.01851)
+**技术报告**：[[Cui and Yao, 2024] Rethinking LLM Language Adaptation: A Case Study on Chinese Mixtral](https://arxiv.org/abs/2403.01851) [[论文解读]](https://mp.weixin.qq.com/s?__biz=MzU2NDQ3MTQ0MA==&mid=2247489255&idx=1&sn=432c1c0e40d5e4cfc2a7d4d96ac8e3fc&chksm=fc4b2518cb3cac0e63816d65be9b9e11fb201e3a089550e3cb2cb4d1e8eb532c6d7301688926&token=1150909890&lang=zh_CN#rd)
 
 #### 本项目主要内容
 
