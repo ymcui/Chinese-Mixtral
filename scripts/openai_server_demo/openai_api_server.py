@@ -109,7 +109,7 @@ model.eval()
 
 DEFAULT_SYSTEM_PROMPT = ""
 
-# NOTE: this is an arbitrary template, as the original 
+# NOTE: this is an arbitrary template, as the original
 # one does not contain the system prompt.
 # You may need to adjust this template to fit your needs.
 TEMPLATE_WITH_SYSTEM_PROMPT = (
