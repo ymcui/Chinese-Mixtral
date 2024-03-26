@@ -31,7 +31,9 @@ This project is developed based on the [Mixtral model](https://huggingface.co/mi
 
 ## News
 
-**[2024/03/05] Release pre-training and fine-tuning scripts. Technical reports are also available. See: [📚 v1.1 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)**
+**[2024/03/26] Add deployment method of OpenAI-style API. See: [📚v1.2 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.2)**
+
+[2024/03/05] Release pre-training and fine-tuning scripts. Technical reports are also available. See: [📚 v1.1 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)
 
 [2024/01/29] 🚀 Official release of Chinese-Mixtral (Base Model), Chinese-Mixtral-Instruct (Instruction/Chat Model). For more details, see: [📚 v1.0 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)
 
@@ -115,7 +117,7 @@ The related models in this project mainly support the following quantization, in
 | ------------------------------------------------------------ | ------------------------------------------------------------ | :--: | :--: | :----------: | :--: | :--: | :--: | :----------------------------------------------------------: |
 | [llama.cpp](https://github.com/ggerganov/llama.cpp)          | Rich quantization options and efficient local inference      |  ✅   |  ✅   |      ✅       |  ❌   |  ✅   |  ❌   | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/llamacpp_en) |
 | [🤗Transformers](https://github.com/huggingface/transformers) | Native transformers inference interface                      |  ✅   |  ✅   |      ✅       |  ✅   |  ❌   |  ✅   | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/inference_with_transformers_en)                                                    |
-| [Imitation OpenAI API Call](https://platform.openai.com/docs/api-reference) | Server Demo with OpenAI API-like interface                   |  ✅   |  ✅   |      ✅       |  ❌   |  ✅   |  ✅   | [link]                                                       |
+| [Imitation OpenAI API Call](https://platform.openai.com/docs/api-reference) | Server Demo with OpenAI API-like interface                   |  ✅   |  ✅   |      ✅       |  ❌   |  ✅   |  ✅   | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/openai_api_en) |
 | [text-generation-webui](https://github.com/oobabooga/text-generation-webui) | Frontend Web UI deployment method                            |  ✅   |  ✅   |      ✅       |  ✅   |  ✅   |  ❌   | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/text-generation-webui_en)                                                    |
 | [LangChain](https://github.com/hwchase17/langchain)          | Open-source framework for large model applications suitable for secondary development |  ✅   |  ✅   |      ✅       | ❌ | ❌ | ❌ | [link] |
 | [privateGPT](https://github.com/imartinez/privateGPT)                 | Local multi-document Q&A framework            |  ✅  |  ✅  |      ✅      |  ❌  |  ❌  |  ❌  | [link]                                                  |

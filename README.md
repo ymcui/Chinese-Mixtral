@@ -31,7 +31,9 @@
 
 ## 新闻
 
-**[2024/03/05] 开源模型训练和精调代码，发布技术报告。详情查看：[📚v1.1版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)**
+**[2024/03/26] 添加仿OpenAI API部署模式。详情查看：[📚v1.2版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.2)**
+
+[2024/03/05] 开源模型训练和精调代码，发布技术报告。详情查看：[📚v1.1版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)
 
 [2024/01/29] 🚀 正式发布Chinese-Mixtral（基座模型），Chinese-Mixtral-Instruct（指令/chat模型）。详情查看：[📚v1.0版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)
 
@@ -115,7 +117,7 @@ Mixtral是一个稀疏混合专家模型。该模型与以往的LLaMA等主流�
 | :----------------------------------------------------------- | ---------------------------- | :--: | :--: | :--: | :--: | :--: | :--: |:--: |
 | [llama.cpp](https://github.com/ggerganov/llama.cpp)      | 丰富的量化选项和高效本地推理 |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ❌   | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/llamacpp_zh) |
 | [🤗Transformers](https://github.com/huggingface/transformers) | 原生transformers推理接口     |  ✅   |  ✅   |  ✅   |  ✅   |  ❌   |  ✅  | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/inference_with_transformers_zh) |
-| [仿OpenAI API调用](https://platform.openai.com/docs/api-reference) | 仿OpenAI API接口的服务器Demo |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ✅  | [link] |
+| [仿OpenAI API调用](https://platform.openai.com/docs/api-reference) | 仿OpenAI API接口的服务器Demo |  ✅   |  ✅   |  ✅   |  ❌   |  ✅   |  ✅  | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/openai_api_zh) |
 | [text-generation-webui](https://github.com/oobabooga/text-generation-webui) | 前端Web UI界面的部署方式 |  ✅   |  ✅   |  ✅   |  ✅   |  ✅  | ❌  | [[link]](https://github.com/ymcui/Chinese-Mixtral/wiki/text-generation-webui_zh) |
 | [LangChain](https://github.com/hwchase17/langchain) | 适合二次开发的大模型应用开源框架 |  ✅  |  ✅   |  ✅   |  ❌   |  ❌   | ❌  | [link] |
 | [privateGPT](https://github.com/imartinez/privateGPT) | 多文档本地问答框架 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | [link] |
