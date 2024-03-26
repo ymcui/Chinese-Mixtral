@@ -197,12 +197,15 @@ def predict(
     generation_config.output_scores = False
     generation_config.max_new_tokens = max_new_tokens
     generation_config.repetition_penalty = float(repetition_penalty)
+
+    # For the reason why pad_token_id = eos_token_id, see:
+    # https://github.com/meta-llama/llama-recipes/blob/f7aa02af9f2c427ebb70853191b72636130b9df5/src/llama_recipes/finetuning.py#L141
     with torch.no_grad():
         generation_output = model.generate(
             input_ids=input_ids,
             attention_mask=attention_mask,
             eos_token_id=tokenizer.eos_token_id,
-            pad_token_id=tokenizer.pad_token_id,
+            pad_token_id=tokenizer.eos_token_id,
             generation_config=generation_config,
         )
     s = generation_output.sequences[0]
