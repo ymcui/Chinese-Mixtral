@@ -31,6 +31,8 @@ This project is developed based on the [Mixtral model](https://huggingface.co/mi
 
 ## News
 
+**[2024/03/27] Add 1-bit/2-bit/3-bit GGUF models: [[🤗HF]](https://huggingface.co/hfl); Meanwhile, this project has been added in the SOTA! model platform of Synced, welcome to follow: https://sota.jiqizhixin.com/project/chinese-mixtral**
+
 **[2024/03/26] Add deployment method of OpenAI-style API. See: [📚v1.2 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.2)**
 
 [2024/03/05] Release pre-training and fine-tuning scripts. Technical reports are also available. See: [📚 v1.1 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)
