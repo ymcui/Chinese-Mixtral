@@ -31,9 +31,11 @@
 
 ## 新闻
 
-**[2024/03/27] 添加1-bit/2-bit/3-bit量化版GGUF模型：[[🤗HF]](https://huggingface.co/hfl)；同时，本项目已入驻机器之心SOTA!模型平台，欢迎关注：https://sota.jiqizhixin.com/project/chinese-mixtral**
+**[2024/04/30] Chinese-LLaMA-Alpaca-3 已正式发布，开源基于Llama-3的Llama-3-Chinese-8B和Llama-3-Chinese-8B-Instruct，请参阅：https://github.com/ymcui/Chinese-LLaMA-Alpaca-3**
 
-**[2024/03/26] 添加仿OpenAI API部署模式。详情查看：[📚v1.2版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.2)**
+[2024/03/27] 添加1-bit/2-bit/3-bit量化版GGUF模型：[[🤗HF]](https://huggingface.co/hfl)；同时，本项目已入驻机器之心SOTA!模型平台，欢迎关注：https://sota.jiqizhixin.com/project/chinese-mixtral
+
+[2024/03/26] 添加仿OpenAI API部署模式。详情查看：[📚v1.2版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.2)
 
 [2024/03/05] 开源模型训练和精调代码，发布技术报告。详情查看：[📚v1.1版本发布日志](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)
 

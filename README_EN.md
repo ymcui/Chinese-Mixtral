@@ -31,13 +31,15 @@ This project is developed based on the [Mixtral model](https://huggingface.co/mi
 
 ## News
 
-**[2024/03/27] Add 1-bit/2-bit/3-bit GGUF models: [[🤗HF]](https://huggingface.co/hfl); Meanwhile, this project has been added in the SOTA! model platform of Synced, welcome to follow: https://sota.jiqizhixin.com/project/chinese-mixtral**
+**[Apr 30, 2024] Chinese-LLaMA-Alpaca-3 project introduces Llama-3-Chinese-8B and Llama-3-Chinese-8B-Instruct, based on Meta's Llama-3. Check: https://github.com/ymcui/Chinese-LLaMA-Alpaca-3**
 
-**[2024/03/26] Add deployment method of OpenAI-style API. See: [📚v1.2 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.2)**
+[Mar 27, 2024] Add 1-bit/2-bit/3-bit GGUF models: [[🤗HF]](https://huggingface.co/hfl); Meanwhile, this project has been added in the SOTA! model platform of Synced, welcome to follow: https://sota.jiqizhixin.com/project/chinese-mixtral**
 
-[2024/03/05] Release pre-training and fine-tuning scripts. Technical reports are also available. See: [📚 v1.1 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)
+[Mar 26, 2024] Add deployment method of OpenAI-style API. See: [📚v1.2 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.2)
 
-[2024/01/29] 🚀 Official release of Chinese-Mixtral (Base Model), Chinese-Mixtral-Instruct (Instruction/Chat Model). For more details, see: [📚 v1.0 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)
+[Mar 5, 2024] Release pre-training and fine-tuning scripts. Technical reports are also available. See: [📚 v1.1 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.1)
+
+[Jan 29, 2024] 🚀 Official release of Chinese-Mixtral (Base Model), Chinese-Mixtral-Instruct (Instruction/Chat Model). For more details, see: [📚 v1.0 Release Notes](https://github.com/ymcui/Chinese-Mixtral/releases/tag/v1.0)
 
 
 ## Content Guide
